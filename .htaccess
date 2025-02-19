@@ -1,0 +1,8 @@
+#Header add Access-Control-Allow-Methods "POST"
+#AddType text/x-component .htc
+RewriteEngine On
+RewriteBase /
+#RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA]
