@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <title>Test PHP</title>
     <meta charset="UTF-8">
@@ -53,36 +53,26 @@ session_start();
         <hr>
         <div>
             <h3>Contact</h3>
-            <div>
-                Facebook
+            <hr>
+            <div class="row align-items-start">
+                <div class="col">
+                    <div>Facebook</div>
+                    <div>Instagram</div>
+                    <div>Twitter</div>
+                    <div>Bluesky</div>
+                    <div>Mastodon</div>
+                </div>
+                <div class="col">
+                    <div>Tumblr</div>
+                    <div>Threads</div>
+                    <div>X</div>
+                    <div>Cara</div>
+                    <div>IRC</div>
+                    <div>Teamspeak</div>
+                </div>
+                <div class="col"></div>
             </div>
-            <div>
-                Instagram
-            </div>
-            <div>
-                Twitter
-            </div>
-            <div>
-                Bluesky
-            </div>
-            <div>
-                Mastodon
-            </div>
-            <div>
-                Tumblr
-            </div>
-            <div>
-                Threads
-            </div>
-            <div>
-                X
-            </div>
-            <div>
-                Cara
-            </div>
-            <div>IRC</div>
-            <div>Teamspeak
-            </div>
+
         </div>
     </div>
 </main>

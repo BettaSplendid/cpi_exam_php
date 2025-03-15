@@ -1,19 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION['UserId'])) {
-    header('Location: ' . '/');
-    die();
-}
-var_dump($_SESSION);
-$test3 = $_SESSION['UserId'];
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="">
 <head>
     <title>Test PHP</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -38,38 +32,30 @@ $test3 = $_SESSION['UserId'];
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="../index.php">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/subscribe">Subscribe</a>
+                <a class="nav-link" href="../index.php">Subscribe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/account">Account</a>
+                <a class="nav-link" href="../index.php">Account</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link" href="../index.php">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/prices">Prices</a>
+                <a class="nav-link" href="../index.php">Prices</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/buy">Buy</a>
+                <a class="nav-link" href="../index.php">Buy</a>
             </li>
         </ul>
         <hr>
         <div>
-            <h3>Admin</h3>
-            <div>
-                <a href="/admin/user">Gestion Utilisateur</a>
-            </div>
-            <div>
-                <a href="">Gestion Prix</a>
-            </div>
-            <div>
-                <a href="">Gestion Prestation</a>
-            </div>
+            Veuillez vous connecter ou vous inscrire.
         </div>
-    </div>
+        </div>
 </main>
 </body>
 </html>
+

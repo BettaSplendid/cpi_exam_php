@@ -58,16 +58,8 @@ $test3 = $_SESSION['UserId'];
         </ul>
         <hr>
         <div>
-            <h3>Admin</h3>
-            <div>
-                <a href="/admin/user">Gestion Utilisateur</a>
-            </div>
-            <div>
-                <a href="">Gestion Prix</a>
-            </div>
-            <div>
-                <a href="">Gestion Prestation</a>
-            </div>
+            <h3>Admin - Prix</h3>
+
         </div>
     </div>
 </main>

@@ -1,19 +1,15 @@
 <?php
 session_start();
-
+if (!isset($_SESSION['UserId'])) {
+    header('Location: ' . '/');
+    die();
+}
 var_dump($_SESSION);
-var_dump($_SESSION['user']);
-
-//if(!isset($_SESSION['user'])){
-//    var_dump($_SESSION['user']);
-//    sleep(1);
-//    header("Location: /");
-//    die();
-//}
+$test3 = $_SESSION['UserId'];
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <title>Test PHP</title>
     <meta charset="UTF-8">
@@ -62,10 +58,38 @@ var_dump($_SESSION['user']);
         </ul>
         <hr>
         <div>
+            <div>
+                Avatar :
+                    <i>WIP</i>
+            </div>
+            <div>
+                Nom :
+                <?php print($_SESSION['UserNom']); ?>
+            </div>
+            <div>
+                Prénom :
+                <?php print($_SESSION['UserPrenom']); ?>
+            </div>
+            <div>
+                Email :
+                <?php print($_SESSION['UserEmail']); ?>
+            </div>
+            <div>
+                Type Compte :
+                <?php if($_SESSION['UserDroits'] == 1){
+                    print('Standard');
+                } else
+                    print('Admin'); ?>
+            </div>
+            <div>
+                <?php
+                if($_SESSION['UserDroits'] == 2)
+                    echo '<br><hr><a href="/admin">Administration</a><hr>';
+                ?>
+            </div>
 
         </div>
     </div>
 </main>
 </body>
 </html>
-

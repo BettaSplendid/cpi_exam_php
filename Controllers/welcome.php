@@ -1,4 +1,4 @@
-<html>
+<html lang="fr">
 <body>
 
 Welcome <?php echo $_POST["name"]; ?><br>

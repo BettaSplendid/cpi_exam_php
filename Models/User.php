@@ -1,5 +1,9 @@
 <?php
 
+Namespace UserClasses;
+
+use PDO;
+
 class User
 {
     private $id_users;
@@ -97,7 +101,7 @@ class User
 
 class UserManager
 {
-    private function dbConnect()
+    public function dbConnect()
     {
         $user = 'root';
         $password = '';
@@ -178,6 +182,8 @@ class UserManager
             $user = new User($donnees['nom'], $donnees['prenom'], $donnees['mail']);
             $user->setIdUsers($donnees['id_users']);
             $user->setDroits($donnees['droits']);
+            $user->setPassword("");
+            $user->setAvatar("");
             return $user;
         } else {
             return false;

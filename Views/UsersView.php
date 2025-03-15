@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <title>Test PHP</title>
     <meta charset="UTF-8">
@@ -36,13 +36,13 @@ session_start();
                 <a class="nav-link" href="/subscribe">Subscribe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Account">Account</a>
+                <a class="nav-link" href="/account">Account</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Contact">Contact</a>
+                <a class="nav-link" href="/contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Prices">Prices</a>
+                <a class="nav-link" href="/prices">Prices</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/Buy">Buy</a>

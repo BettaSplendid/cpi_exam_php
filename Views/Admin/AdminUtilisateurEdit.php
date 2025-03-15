@@ -4,8 +4,7 @@ if (!isset($_SESSION['UserId'])) {
     header('Location: ' . '/');
     die();
 }
-var_dump($_SESSION);
-$test3 = $_SESSION['UserId'];
+
 ?>
 
 <!DOCTYPE html>
@@ -58,15 +57,8 @@ $test3 = $_SESSION['UserId'];
         </ul>
         <hr>
         <div>
-            <h3>Admin</h3>
+            <h3>Admin - User</h3>
             <div>
-                <a href="/admin/user">Gestion Utilisateur</a>
-            </div>
-            <div>
-                <a href="">Gestion Prix</a>
-            </div>
-            <div>
-                <a href="">Gestion Prestation</a>
             </div>
         </div>
     </div>

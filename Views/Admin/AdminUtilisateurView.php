@@ -4,8 +4,12 @@ if (!isset($_SESSION['UserId'])) {
     header('Location: ' . '/');
     die();
 }
-var_dump($_SESSION);
-$test3 = $_SESSION['UserId'];
+
+require_once 'Controllers/UserController.php';
+//$my_user_controller = new UserClasses\UserManager();
+$my_users = getAllUsers();
+//var_dump($my_users);
+var_dump($my_users[1]);
 ?>
 
 <!DOCTYPE html>
@@ -58,15 +62,23 @@ $test3 = $_SESSION['UserId'];
         </ul>
         <hr>
         <div>
-            <h3>Admin</h3>
+            <h3>Admin - User</h3>
             <div>
-                <a href="/admin/user">Gestion Utilisateur</a>
-            </div>
-            <div>
-                <a href="">Gestion Prix</a>
-            </div>
-            <div>
-                <a href="">Gestion Prestation</a>
+                <?php
+                foreach ($my_users as $item) {
+                    echo('<div> Id User: ' . $item['id_users'] . '</div>');
+                    echo('<div> Nom User: ' . $item['nom'] . '</div>');
+                    echo('<div> Prenom User: ' . $item['prenom'] . '</div>');
+                    echo('<div> Mail User: ' . $item['mail'] . '</div>');
+                    echo('<div> Avatar User: ' . $item['avatar'] . '</div>');
+                    echo('<div> Droits User: ' . $item['droits'] . '</div>');
+                    echo('<form action="/Controllers/UserController.php" method="POST">
+                        <input type="submit" name="action" value="update"/>');
+                    echo('<input id="prodId" name="userID" type="hidden" value='. $item['id_users'] . '/>');
+                    echo('</form>');
+                    echo('<hr>');
+                }
+                ?>
             </div>
         </div>
     </div>
